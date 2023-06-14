@@ -1,0 +1,714 @@
+﻿<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jena - Organic Food Website Template Using Bootstrap 5"/>
+  <meta name="keywords" content=" clean, digital, ecommerce, food, modern, multipurpose, organic, prestashop, responsive"/>
+  <meta name="author" content="Hastech"/>
+
+  <title>丹东特产销售商城</title>
+
+  <!--== Favicon ==-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  <!--== Google Fonts ==-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!--== Bootstrap CSS ==-->
+  <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+  <!--== Ionicons CSS ==-->
+  <link href="/css/ionicons.css" rel="stylesheet"/>
+  <!--== Simple Line Icons CSS ==-->
+  <link href="/css/simple-line-icons.css" rel="stylesheet"/>
+  <!--== FancyBox CSS ==-->
+  <link href="/css/jquery.fancybox.min.css" rel="stylesheet"/>
+  <!--== Swiper CSS ==-->
+  <link href="/css/swiper.min.css" rel="stylesheet"/>
+  <!--== Main Style CSS ==-->
+  <link href="/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<!--wrapper start-->
+<div class="wrapper home-default-wrapper">
+
+  <!--== Start Header Wrapper ==-->
+  <header class="header-wrapper">
+    <div class="header-top d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-top-inner">
+              <div class="header-top-action-area">
+                <div class="header-lang-dropdown">
+                  <button type="button" class="btn-lang dropdown-toggle" id="dropdownLang" data-bs-toggle="dropdown" aria-expanded="false"><img src="/img/photos/cflag.png" alt="Image" width="16" height="11"> <span>中文</span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+                    <li class="dropdown-item active"><img src="/img/photos/cflag.png" alt="Image" width="16" height="11"> <span>中文</span></li>
+                    <li class="dropdown-item"><img src="/img/photos/1.webp" alt="Image" width="16" height="11"> <span>English</span></li>
+                  </ul>
+                </div>
+                <div class="header-currency-dropdown">
+                  <button type="button" class="btn-currency dropdown-toggle" id="dropdownCurrency" data-bs-toggle="dropdown" aria-expanded="false"><span>RMB ￥</span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                    <li class="dropdown-item active"><span>RMB ￥</span></li>
+                    <li class="dropdown-item"><span>USD $</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header-top-info">
+                <div class="info-map">
+                  <a href="contact.html"> 中国·丹东 </a>
+                </div>
+                <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                  <span class="current-item">[[${session.username}]]</span>
+                  <ul class="info-dropdown info-dropdown-toggle">
+                    <li><a href="/my-account">我的账户</a></li>
+                    <li><a href="login-register.html">退出</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-middle">
+      <div class="header-resmobile d-block d-lg-none">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-4 col-sm-4 col-3">
+              <div class="header-action-area btn-action-menu">
+                <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                  <i class="ion-navicon"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-6">
+              <div class="header-logo-area">
+                <a href="index.html">
+                  <img class="logo-main" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="57"/>
+                  <img class="logo-light" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="57"/>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-3">
+              <div class="header-middle-action-area">
+                <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                  <span class="current-item"><i class="icon-user"></i></span>
+                  <ul class="info-dropdown info-dropdown-toggle">
+                    <li><a href="my-account.html">我的账号</a></li>
+                    <li><a href="login-register.html">退出</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="header-search-box">
+                <form action="#" method="post">
+                  <div class="form-input-group">
+                    <input type="text" id="search2" placeholder="请输入要搜索的商品名称......">
+                    <div class="categories-dropdown">
+                      <select class="form-control select-dropdown">
+                        <option selected="">商 品 种 类</option>
+                        <option value="lan1">海产品</option>
+                        <option value="lan2">农产品</option>
+                        <option value="lan3">其他</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn-src">
+                      <i class="icon-magnifier"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container d-none d-lg-block">
+        <div class="row align-items-center">
+          <div class="col-3">
+            <div class="header-logo-area">
+              <a href="index.html">
+                <img class="logo-main" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="40"/>
+                <img class="logo-light" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="40"/>
+              </a>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="header-middle-right">
+              <div class="header-search-box">
+                <form action="#" method="post">
+                  <div class="form-input-group">
+                    <input type="text" id="search" placeholder="请输入要搜索的商品名称......">
+                    <div class="categories-dropdown">
+                      <select class="form-control select-dropdown">
+                        <option selected="">商 品 种 类</option>
+                        <option value="lan1">海产品</option>
+                        <option value="lan2">农产品</option>
+                        <option value="lan3">其他</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn-src">
+                      <i class="icon-magnifier"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="header-middle-action-area">
+                <div class="header-action-btn-search">
+                  <button class="btn-search btn-search-menu">
+                    <i class="icon-magnifier"></i>
+                  </button>
+                </div>
+                <div class="header-action-wishlist">
+                  <a class="btn-wishlist" href="/wish/showWishList">
+                    <span class="cart-count">[[${wishNum}]]</span>
+                    <i class="icon-heart"></i>
+                  </a>
+                </div>
+                <div class="header-action-cart header-minicart">
+                  <a class="btn-cart cart-icon" href="shop-cart.html">
+                    <span class="cart-count">[[${cartNum}]]</span>
+                    <i class="icon-bag"></i>
+                  </a>
+                  <span class="cart-amount">￥[[${totalPrice}]]</span>
+                  <div class="header-minicart-content">
+                    <div class="minicart-inner">
+                      <div class="minicart-list" th:each="cl:${cartList}">
+                        <div class="minicart-item">
+                          <a class="thumb" href="single-product.html">
+                            <img th:src="${cl.getImage()}" alt="Image-HasTech" width="125" height="125">
+                            <span th:text="${cl.getPname()}"></span>
+                            <span class="quantity-number" th:text="'x'+${cl.getNum()}"></span>
+                          </a>
+                          <p class="quantity-price" th:text="'￥'+${cl.getTotal_price()}"></p>
+                          <a class="minicart-remove" type="button" th:href="@{/indexLogin/deleteCart(cid=${cl.getCid()})}">×</a>
+                        </div>
+                      </div>
+                      <div class="minicart-total">
+                        <div class="minicart-price minicart-subtotal">
+                          <span>总计</span>
+                          <span class="total">￥[[${totalPrice}]]</span>
+                        </div>
+                      </div>
+                      <div class="minicart-buttons">
+                        <a class="cart-button" href="shop-checkout.html">去下单</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-action-area">
+                  <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                    <i class="icon-menu"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-area header-default sticky-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+            <div class="vertical-menu">
+              <button class="menu-btn"><span>商城一览</span></button>
+              <ul class="vmenu-content vmenu-content-none">
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">海产品<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">全母花盖蟹</a></li>
+                        <li><a href="shop.html">丹东醉泥螺</a></li>
+                        <li><a href="shop.html">东港杂色蛤</a></li>
+                        <li><a href="shop.html">东港大黄蚬</a></li>
+                        <li><a href="shop.html">东港梭子蟹</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="/img/photos/seefood.jpg"></a></li>
+                  </ul>
+                  <!-- sub menu -->
+                </li>
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">水果<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">丹东草莓</a></li>
+                        <li><a href="shop.html">辽西秋白梨</a></li>
+                        <li><a href="shop.html">孤山杏梅</a></li>
+                        <li><a href="shop.html">艳红桃</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="/img/photos/strawberry.jpg"></a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">其他<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">鸭绿江咸鸭蛋</a></li>
+                        <li><a href="shop.html">东北叉子条</a></li>
+                        <li><a href="shop.html">东港大米</a></li>
+                        <li><a href="shop.html">东港板栗</a></li>
+                        <li><a href="shop.html">石柱参</a></li>
+                        <li><a href="shop.html">凤城蚕蛹</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="/img/photos/yaluriver.jpg"></a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- menu content -->
+            </div>
+          </div>
+          <div class="col-lg-7 d-none d-lg-block">
+            <div class="header-navigation-area">
+              <ul class="main-menu nav position-relative">
+                <li><a href="index.html">首页</a>
+                </li>
+                <li><a href="shop-login.html"><span>进入商城</span></a>
+                </li>
+                <li class="has-submenu"><a>用户信息</a>
+                  <ul class="submenu-nav">
+                    <li><a href="login-register.html">登录/注册</a></li>
+                    <li><a href="/my-account">我的账户</a></li>
+                  </ul>
+                </li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-sm-7 col-md-8 col-lg-2">
+            <div class="header-action-main-area">
+              <div class="header-action-btn-search">
+                <button class="btn-search btn-search-menu">
+                  <i class="icon-magnifier"></i>
+                </button>
+              </div>
+              <div class="header-action-wishlist">
+                <a class="btn-wishlist" href="/wish/showWishList">
+                  <span class="cart-count">[[${wishNum}]]</span>
+                  <i class="icon-heart"></i>
+                </a>
+              </div>
+              <div class="header-action-cart header-minicart">
+                <a class="btn-cart cart-icon" href="shop-cart.html">
+                  <span class="cart-count">[[${cartNum}]]</span>
+                  <i class="icon-bag"></i>
+                </a>
+                <span class="cart-amount">￥[[${totalPrice}]]</span>
+                <div class="header-minicart-content">
+                  <div class="minicart-inner">
+                    <div class="minicart-list" th:each="cl:${cartList}">
+                      <div class="minicart-item">
+                        <a class="thumb" href="single-product.html">
+                          <img th:src="${cl.getImage()}" alt="Image-HasTech" width="125" height="125">
+                          <span th:text="${cl.getPname()}"></span>
+                          <span class="quantity-number" th:text="'x'+${cl.getNum()}"></span>
+                        </a>
+                        <p class="quantity-price" th:text="'￥'+${cl.getTotal_price()}"></p>
+                        <a class="minicart-remove" type="button" th:href="@{/indexLogin/deleteCart(cid=${cl.getCid()})}">×</a>
+                      </div>
+                    </div>
+                    <div class="minicart-total">
+                      <!--
+                      <div class="minicart-price">
+                        <span>Subtotal</span>
+                        <span class="total">$85.00</span>
+                      </div>
+                      <div class="minicart-price">
+                        <span>Shipping</span>
+                        <span class="total">$7.00</span>
+                      </div>
+                      <div class="minicart-price">
+                        <span>Taxes</span>
+                        <span class="total">$85.00</span>
+                      </div>
+                      -->
+                      <div class="minicart-price minicart-subtotal">
+                        <span>总计</span>
+                        <span class="total">￥[[${totalPrice}]]</span>
+                      </div>
+                    </div>
+                    <div class="minicart-buttons">
+                      <a class="cart-button" href="shop-checkout.html">去下单</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-action-area">
+                <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                  <i class="icon-menu"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--== End Header Wrapper ==-->
+
+  <main class="main-content">
+    <!--== Start Hero Area Wrapper ==-->
+    <section class="home-slider-area slider-default">
+      <div class="home-slider-content">
+        <div class="swiper-container home-slider-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"  th:each="il:${indexList}">
+              <!-- Start Slide Item -->
+              <div class="home-slider-item">
+                <div class="thumb-one bg-img" th:data-bg-img="${il.getImage()}"></div>
+                <div class="slider-content-area">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="content">
+                          <div class="inner-content">
+                            <div class="wrap-one">
+                              <h5 th:text="${il.getTitle()}"></h5>
+                            </div>
+                            <div class="wrap-two">
+                              <h2 th:text="${il.getName()}"></h2>
+                            </div>
+                            <div class="wrap-three">
+                              <h2 th:text="${il.getContent()}"></h2>
+                            </div>
+                            <div class="wrap-four">
+                              <p th:text="${il.getDetail()}"></p>
+                            </div>
+                            <div class="wrap-five">
+                              <a href="shop.html" class="btn-theme">点击查看</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Slide Item -->
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!--== End Hero Area Wrapper ==-->
+
+    <!--== Start Featured Area Wrapper ==-->
+    <section class="featured-area featured-default-area">
+      <div class="container">
+        <div class="featured-items">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="featured-item">
+                <div class="icon">
+                  <img src="/img/icons/f1.webp" alt="Image" width="40" height="28">
+                </div>
+                <div class="featured-info">
+                  <h4 class="title">免运费</h4>
+                  <p>每款产品均免运费且提供运费险</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="featured-item">
+                <div class="icon">
+                  <img src="/img/icons/f2.webp" alt="Image" width="40" height="30">
+                </div>
+                <div class="featured-info">
+                  <h4 class="title">7天免费退换货</h4>
+                  <p>在7天内无条件退换货</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="featured-item">
+                <div class="icon">
+                  <img src="/img/icons/f3.webp" alt="Image" width="40" height="33">
+                </div>
+                <div class="featured-info">
+                  <h4 class="title">付款安全可靠</h4>
+                  <p>我们保证您的付款安全</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="featured-item">
+                <div class="icon">
+                  <img src="/img/icons/f4.webp" alt="Image" width="40" height="35">
+                </div>
+                <div class="featured-info">
+                  <h4 class="title">客服24小时在线</h4>
+                  <p>如有问题可随时联系客服</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Featured Area Wrapper ==-->
+
+    <!--== Start Product Tab Area Wrapper ==-->
+    <section class="product-area product-style1-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 m-auto">
+            <div class="section-title text-center">
+              <h2 class="title">新品推荐</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="swiper-container-wrap swiper-nav-style product-slider-nav" >
+              <div class="swiper-container product-slider-container" >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" th:each="np:${new_product}">
+                    <!-- Start Product Item -->
+                    <div class="product-item">
+                      <div class="product-thumb">
+                        <img th:src="${np.getImage()}" alt="Image" width="300" height="300">
+                        <span class="bg-thumb" data-bg-img="/img/shop/crab.webp"></span>
+                        <div class="ribbons">
+                          <span class="ribbon ribbon-new">new</span>
+                        </div>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="title"><a th:href="@{/shop-single-product-login.html(pid=${np.getPid()})}" th:text="${np.getPname()}"></a></h4>
+                        <div class="prices">
+                          <span class="price" th:text="'￥'+${np.getPrice()}"></span>
+                        </div>
+                        <div class="content-inner">
+                          <button class="btn-link" type="button" data-bs-toggle="modal" data-bs-target="#action-CartAddModal"><i class="icon-bag icons"></i> 添加到购物车 </button>
+                          <div class="product-info-action">
+                            <button class="action-quick-view" type="button" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal"> <i class="icon-eye icons"></i></button>
+                            <button class="action-wishlist" type="button" data-bs-toggle="modal" data-bs-target="#action-WishlistModal"><i class="icon-heart icons"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Product Item -->
+                  </div>
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Product Tab Area Wrapper ==-->
+
+    <!--== Start Category Area Wrapper ==-->
+    <div class="category-area product-category1-area">
+      <div class="container">
+        <div class="row category-items1">
+          <div class="col-md-3">
+            <div class="category-item mb-sm-30">
+              <div class="thumb effect-animate-flash">
+                <a href="/shop-list"><img src="/img/category/scream_1.jpg" alt="Image" width="255" height="315"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="category-item mb-sm-30">
+              <div class="thumb effect-animate-flash">
+                <a href="/shop-list"><img src="/img/category/scream_3.webp" alt="Image" width="540" height="315"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="category-item">
+              <div class="thumb effect-animate-flash">
+                <a href="/shop-list"><img src="/img/category/scream_1.jpg" alt="Image" width="500" height="500"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== End Category Area Wrapper ==-->
+
+    <!--== Start Product Tab Area Wrapper ==-->
+    <section class="product-area product-style2-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 m-auto">
+            <div class="section-title text-center">
+              <h4 class="subtitle">丹东特产商城</h4>
+              <h2 class="title">热销商品</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="swiper-container-wrap swiper-nav-style product-slider2-nav">
+              <div class="swiper-container product-slider2-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" th:each="hp:${hot_product}">
+                    <!-- Start Product Item -->
+                    <div class="product-item">
+                      <div class="product-thumb">
+                        <img th:src="${hp.getImage()}" alt="Image" width="300" height="300">
+                        <span class="bg-thumb" data-bg-img="/img/shop/ge.jpg"></span>
+                        <div class="ribbons">
+                          <span class="ribbon ribbon-discount">hot</span>
+                        </div>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="title"><a th:href="@{/shop-single-product-login.html(pid=${hp.getPid()})}" th:text="${hp.getPname()}"></a></h4>
+                        <div class="prices">
+                          <span class="price" th:text="'￥'+${hp.getPrice()}"></span>
+                        </div>
+                        <div class="content-inner">
+                          <button class="btn-link" type="button" data-bs-toggle="modal" data-bs-target="#action-CartAddModal"><i class="icon-bag icons"></i> 添加到购物车 </button>
+                          <div class="product-info-action">
+                            <button class="action-quick-view" type="button" data-bs-toggle="modal" data-bs-target="#action-QuickViewModal"> <i class="icon-eye icons"></i></button>
+                            <button class="action-wishlist" type="button" data-bs-toggle="modal" data-bs-target="#action-WishlistModal"><i class="icon-heart icons"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Product Item -->
+                  </div>
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Product Tab Area Wrapper ==-->
+
+    <!--== Start Divider Area Wrapper ==-->
+    <section class="divider-area divider-style1-area bg-img" data-bg-img="/img/divider/1.jpg">
+    </section>
+    <!--== End Divider Area Wrapper ==-->
+
+
+
+    <!--== Scroll Top Button ==-->
+    <div class="scroll-to-top"><span class="ion-chevron-up"></span></div>
+
+    <!--== Start Product Quick Add Cart Modal ==-->
+    <aside class="product-action-modal modal fade" id="action-CartAddModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="product-action-view-content">
+              <button type="button" class="btn-close" data-bs-dismiss="modal">
+                <span class="ion-android-close"><i class="lastudioicon-e-remove"></i></span>
+              </button>
+              <div class="modal-action-messages">
+                <i class="pe-7s-check"></i>  Added to cart successfully!
+              </div>
+              <div class="modal-action-product">
+                <div class="thumb">
+                  <img src="/img/shop/1.webp" alt="Organic Food Juice" width="300" height="300">
+                </div>
+                <h4 class="product-name"><a href="shop-single-product.html">Organic Food Juice</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!--== End Product Quick Add Cart Modal ==-->
+
+    <!--== Start Product Quick Wishlist Modal ==-->
+    <aside class="product-action-modal modal fade" id="action-WishlistModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="product-action-view-content">
+              <button type="button" class="btn-close" data-bs-dismiss="modal">
+                <span class="ion-android-close"><i class="lastudioicon-e-remove"></i></span>
+              </button>
+              <div class="modal-action-messages">
+                <i></i>确认将该商品添加到收藏里吗？
+              </div>
+              <div class="modal-action-product">
+                <div class="thumb">
+                  <img src="/img/shop/1.webp" alt="Organic Food Juice" width="300" height="300">
+                </div>
+                <div class="single-input-item">
+                <a class="btn btn-sm btn-success" type="button" href="#">确定</a>
+                <a class="btn btn-sm btn-danger" style="margin-left:20px" type="button">取消</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!--== End Product Quick Wishlist Modal ==-->
+
+    <!--== Start Aside Search Menu ==-->
+    <aside class="search-box-wrapper">
+      <div class="search-box-content-inner">
+        <div class="search-box-form-wrap">
+          <div class="search-note">
+            <p>Start typing and press Enter to search</p>
+          </div>
+          <form action="#" method="post">
+            <div class="search-form position-relative">
+              <input type="search" class="form-control" placeholder="Search" id="search-input">
+              <button class="search-button"><i class="ion-ios-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--== End Aside Search Menu ==-->
+      <a href="javascript:;" class="search-close"><i class="ion-close-round"></i></a>
+    </aside>
+    <!--== End Aside Search Menu ==-->
+
+    <!--=======================Javascript============================-->
+
+    <!--=== Modernizr Min Js ===-->
+    <script src="/js/modernizr.js"></script>
+    <!--=== jQuery Min Js ===-->
+    <script src="/js/jquery-main.js"></script>
+    <!--=== jQuery Migration Min Js ===-->
+    <script src="/js/jquery-migrate.js"></script>
+    <!--=== Popper Min Js ===-->
+    <script src="/js/popper.min.js"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="/js/bootstrap.min.js"></script>
+    <!--=== jquery Swiper Min Js ===-->
+    <script src="/js/swiper.min.js"></script>
+    <!--=== jquery Fancybox Min Js ===-->
+    <script src="/js/fancybox.min.js"></script>
+    <!--=== jquery Countdown Js ===-->
+    <script src="/js/jquery.countdown.min.js"></script>
+    <!--=== jquery Zoom Min Js ===-->
+    <script src="/js/jquery-zoom.min.js"></script>
+
+    <!--=== Custom Js ===-->
+    <script src="/js/custom.js"></script>
+
+</body>
+
+</html>

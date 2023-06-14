@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lee.mapper.WishMapper">
+    <resultMap id="WishEntityMap" type="com.lee.pojo.Wish" >
+        <id column="wid" property="wid" jdbcType="INTEGER" />
+        <result column="pid" property="pid" jdbcType="INTEGER" />
+        <result column="uid" property="uid" jdbcType="INTEGER" />
+    </resultMap>
+
+    <insert id="addWishList" useGeneratedKeys="true" >
+        insert into wishlist (pid, uid)
+        values (#{pid}, #{uid})
+    </insert>
+
+    <select id="findWishVOByUid" resultType="com.lee.vo.WishVO">
+        select wid,uid,wishlist.pid,product.pname,product.image,product.price
+        from wishlist left join product on wishlist.pid = product.pid
+        where uid = #{uid}
+    </select>
+
+    <delete id="deleteWishListByWid" parameterType="Wish">
+        delete from wishlist where wid = #{wid}
+    </delete>
+
+</mapper>
+

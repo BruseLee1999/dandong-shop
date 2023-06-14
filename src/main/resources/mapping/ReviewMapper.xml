@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lee.mapper.ReviewMapper">
+    <resultMap id="ReviewEntityMap" type="com.lee.pojo.Review" >
+        <id column="rid" property="rid" jdbcType="INTEGER" />
+        <result column="pid" property="pid" jdbcType="INTEGER" />
+        <result column="uid" property="uid" jdbcType="INTEGER" />
+        <result column="date" property="date" jdbcType="VARCHAR" />
+        <result column="type" property="type" jdbcType="VARCHAR" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <insert id="addToReview" useGeneratedKeys="true">
+        insert into review (pid, uid, date, type, title, content)
+        values (#{pid}, #{uid}, #{date}, #{type}, #{title}, #{content})
+    </insert>
+
+    <select id="findAllReviewByPid" resultType="com.lee.vo.ReviewVO">
+        select review.`date`,type,title,content,`user`.username
+        from review left join `user` on review.uid = `user`.id
+        where pid = #{pid}
+    </select>
+
+</mapper>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lee.mapper.DetailMapper">
+    <resultMap id="DetailEntityMap" type="com.lee.pojo.Detail" >
+        <id column="pid" property="pid" jdbcType="INTEGER" />
+        <result column="weight" property="weight" jdbcType="VARCHAR" />
+        <result column="area" property="area" jdbcType="VARCHAR" />
+        <result column="pack" property="pack" jdbcType="INTEGER" />
+        <result column="domestic" property="domestic" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="findProductDetailByPid" resultType="Detail">
+        select * from product_detail where pid = #{pid}
+    </select>
+
+</mapper>
+

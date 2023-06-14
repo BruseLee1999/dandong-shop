@@ -1,0 +1,790 @@
+﻿<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jena - Organic Food Website Template Using Bootstrap 5"/>
+  <meta name="keywords" content=" clean, digital, ecommerce, food, modern, multipurpose, organic, prestashop, responsive"/>
+  <meta name="author" content="Hastech"/>
+
+  <title>丹东特产销售商城</title>
+
+  <!--== Favicon ==-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  <!--== Google Fonts ==-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!--== Bootstrap CSS ==-->
+  <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+  <!--== Ionicons CSS ==-->
+  <link href="/css/ionicons.css" rel="stylesheet"/>
+  <!--== Simple Line Icons CSS ==-->
+  <link href="/css/simple-line-icons.css" rel="stylesheet"/>
+  <!--== FancyBox CSS ==-->
+  <link href="/css/jquery.fancybox.min.css" rel="stylesheet"/>
+  <!--== Swiper CSS ==-->
+  <link href="/css/swiper.min.css" rel="stylesheet"/>
+  <!--== Main Style CSS ==-->
+  <link href="/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<!--wrapper start-->
+<div class="wrapper home-default-wrapper">
+
+  <!--== Start Header Wrapper ==-->
+  <header class="header-wrapper">
+    <div class="header-top d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-top-inner">
+              <div class="header-top-action-area">
+                <div class="header-lang-dropdown">
+                  <button type="button" class="btn-lang dropdown-toggle" id="dropdownLang" data-bs-toggle="dropdown" aria-expanded="false"><img src="assets/img/photos/cflag.png" alt="Image" width="16" height="11"> <span>中文</span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+                    <li class="dropdown-item active"><img src="/img/photos/cflag.png" alt="Image" width="16" height="11"> <span>中文</span></li>
+                    <li class="dropdown-item"><img src="/img/photos/1.webp" alt="Image" width="16" height="11"> <span>English</span></li>
+                  </ul>
+                </div>
+                <div class="header-currency-dropdown">
+                  <button type="button" class="btn-currency dropdown-toggle" id="dropdownCurrency" data-bs-toggle="dropdown" aria-expanded="false"><span>RMB ￥</span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                    <li class="dropdown-item active"><span>RMB ￥</span></li>
+                    <li class="dropdown-item"><span>USD $</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header-top-info">
+                <div class="info-map">
+                  <a href="contact.html"> 中国·丹东 </a>
+                </div>
+                <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                  <span class="current-item">我的账号</span>
+                  <ul class="info-dropdown info-dropdown-toggle">
+                    <li><a href="my-account.html">我的账号</a></li>
+                    <li><a href="shop-checkout.html">结账</a></li>
+                    <li><a href="login-register.html">退出</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-middle">
+      <div class="header-resmobile d-block d-lg-none">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-4 col-sm-4 col-3">
+              <div class="header-action-area btn-action-menu">
+                <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                  <i class="ion-navicon"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-6">
+              <div class="header-logo-area">
+                <a href="index.html">
+                  <img class="logo-main" src="/img/photos/yaluriver.jpg" alt="Image-HasTech" width="168" height="57"/>
+                  <img class="logo-light" src="/img/photos/yaluriver.jpg" alt="Image-HasTech" width="168" height="57"/>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-3">
+              <div class="header-middle-action-area">
+                <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                  <span class="current-item"><i class="icon-user"></i></span>
+                  <ul class="info-dropdown info-dropdown-toggle">
+                    <li><a href="my-account.html">我的账号</a></li>
+                    <li><a href="shop-checkout.html">结账</a></li>
+                    <li><a href="login-register.html">退出</a></li>
+                  </ul>
+                </div>
+                <div class="header-action-cart header-minicart">
+                  <a class="btn-cart cart-icon" href="shop-cart.html">
+                    <span class="cart-count">2</span>
+                    <i class="icon-bag"></i>
+                  </a>
+                  <div class="header-minicart-content">
+                    <div class="minicart-inner">
+                      <div class="minicart-list">
+                        <div class="minicart-item">
+                          <a class="thumb" href="single-product.html">
+                            <img src="/img/shop/13.webp" alt="Image-HasTech" width="125" height="125">
+                            <span>Wayfarer Messenger</span>
+                            <span class="quantity-number">1x</span>
+                          </a>
+                          <p class="quantity-price">$40.90</p>
+                          <p class="quantity-dimension">Dimension: 40x60cm</p>
+                          <button class="minicart-remove" type="button">×</button>
+                        </div>
+                        <div class="minicart-item">
+                          <a class="thumb" href="single-product.html">
+                            <img src="/img/shop/14.webp" alt="Image-HasTech" width="125" height="125">
+                            <span>Beginner's Yoga1</span>
+                            <span class="quantity-number">1x</span>
+                          </a>
+                          <p class="quantity-price">$44.10</p>
+                          <p class="quantity-dimension">Dimension: 40x60cm</p>
+                          <button class="minicart-remove" type="button">×</button>
+                        </div>
+                      </div>
+                      <div class="minicart-total">
+                        <div class="minicart-price">
+                          <span>Subtotal</span>
+                          <span class="total">$85.00</span>
+                        </div>
+                        <div class="minicart-price">
+                          <span>Shipping</span>
+                          <span class="total">$7.00</span>
+                        </div>
+                        <div class="minicart-price">
+                          <span>Taxes</span>
+                          <span class="total">$85.00</span>
+                        </div>
+                        <div class="minicart-price minicart-subtotal">
+                          <span>Total</span>
+                          <span class="total">$92.00</span>
+                        </div>
+                      </div>
+                      <div class="minicart-buttons">
+                        <a class="cart-button" href="shop-checkout.html">Checkout</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="header-search-box">
+                <form action="#" method="post">
+                  <div class="form-input-group">
+                    <input type="text" id="search2" placeholder="请输入要搜索的商品名称......">
+                    <div class="categories-dropdown">
+                      <select class="form-control select-dropdown">
+                        <option selected="">商 品 种 类</option>
+                        <option value="lan1">海产品</option>
+                        <option value="lan2">农产品</option>
+                        <option value="lan3">其他</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn-src">
+                      <i class="icon-magnifier"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container d-none d-lg-block">
+        <div class="row align-items-center">
+          <div class="col-3">
+            <div class="header-logo-area">
+              <a href="index.html">
+                <img class="logo-main" src="/img/photos/yaluriver.jpg" alt="Image-HasTech" width="168" height="40"/>
+                <img class="logo-light" src="/img/photos/yaluriver.jpg" alt="Image-HasTech" width="168" height="40"/>
+              </a>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="header-middle-right">
+              <div class="header-search-box">
+                <form action="#" method="post">
+                  <div class="form-input-group">
+                    <input type="text" id="search" placeholder="请输入要搜索的商品名称......">
+                    <div class="categories-dropdown">
+                      <select class="form-control select-dropdown">
+                        <option selected="">商 品 种 类</option>
+                        <option value="lan1">海产品</option>
+                        <option value="lan2">农产品</option>
+                        <option value="lan3">其他</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn-src">
+                      <i class="icon-magnifier"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="header-middle-action-area">
+                <div class="header-action-btn-search">
+                  <button class="btn-search btn-search-menu">
+                    <i class="icon-magnifier"></i>
+                  </button>
+                </div>
+                <div class="header-action-wishlist">
+                  <a class="btn-wishlist" href="shop-wishlist.html">
+                    <span class="cart-count">1</span>
+                    <i class="icon-heart"></i>
+                  </a>
+                </div>
+                <div class="header-action-cart header-minicart">
+                  <a class="btn-cart cart-icon" href="shop-cart.html">
+                    <span class="cart-count">2</span>
+                    <i class="icon-bag"></i>
+                  </a>
+                  <span class="cart-amount">￥30.00</span>
+                  <div class="header-minicart-content">
+                    <div class="minicart-inner">
+                      <div class="minicart-list">
+                        <div class="minicart-item">
+                          <a class="thumb" href="single-product.html">
+                            <img src="/img/shop/niluo_1.jpg" alt="Image-HasTech" width="125" height="125">
+                            <span>丹东泥螺</span>
+                            <span class="quantity-number">x1</span>
+                          </a>
+                          <p class="quantity-price">￥30.00</p>
+                          <button class="minicart-remove" type="button">×</button>
+                        </div>
+                        <div class="minicart-item">
+                          <a class="thumb" href="single-product.html">
+                            <img src="/img/shop/rice.jpg" alt="Image-HasTech" width="125" height="125">
+                            <span>东港大米</span>
+                            <span class="quantity-number">x1</span>
+                          </a>
+                          <p class="quantity-price">￥53.90</p>
+                          <button class="minicart-remove" type="button">×</button>
+                        </div>
+                      </div>
+                      <div class="minicart-total">
+                        <!--
+                        <div class="minicart-price">
+                          <span>Subtotal</span>
+                          <span class="total">$85.00</span>
+                        </div>
+                        <div class="minicart-price">
+                          <span>Shipping</span>
+                          <span class="total">$7.00</span>
+                        </div>
+                        <div class="minicart-price">
+                          <span>Taxes</span>
+                          <span class="total">$85.00</span>
+                        </div>
+                        -->
+                        <div class="minicart-price minicart-subtotal">
+                          <span>总计</span>
+                          <span class="total">￥83.90</span>
+                        </div>
+                      </div>
+                      <div class="minicart-buttons">
+                        <a class="cart-button" href="shop-checkout.html">结账</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-action-area">
+                  <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                    <i class="icon-menu"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-area header-default sticky-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+            <div class="vertical-menu">
+              <button class="menu-btn"><span>商城一览</span></button>
+              <ul class="vmenu-content vmenu-content-none">
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">海产品<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">全母花盖蟹</a></li>
+                        <li><a href="shop.html">丹东醉泥螺</a></li>
+                        <li><a href="shop.html">东港杂色蛤</a></li>
+                        <li><a href="shop.html">东港大黄蚬</a></li>
+                        <li><a href="shop.html">东港梭子蟹</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="assets/img/photos/seefood.jpg"></a></li>
+                  </ul>
+                  <!-- sub menu -->
+                </li>
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">水果<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">丹东草莓</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="assets/img/photos/strawberry.jpg"></a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">其他<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">鸭绿江咸鸭蛋</a></li>
+                        <li><a href="shop.html">东北叉子条</a></li>
+                        <li><a href="shop.html">东港大米</a></li>
+                        <li><a href="shop.html">东港板栗</a></li>
+                        <li><a href="shop.html">石柱参</a></li>
+                        <li><a href="shop.html">凤城蚕蛹</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="assets/img/photos/yaluriver.jpg"></a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- menu content -->
+            </div>
+          </div>
+          <div class="col-lg-7 d-none d-lg-block">
+            <div class="header-navigation-area">
+              <ul class="main-menu nav position-relative">
+                <li class="has-submenu active"><a href="index.html">首页</a>
+                </li>
+                <li class="has-submenu position-static"><a href="#/"><span>购物页面</span></a>
+                  <ul class="submenu-nav">
+                    <!--
+                    <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Shop Layouts</span></a>
+                      <ul>
+                        <li><a href="shop-3-column.html">Shop 3 Column</a></li>
+                        <li><a href="shop.html">Shop 4 Column</a></li>
+                        <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
+                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                        <li><a href="shop.html">Shop No Sidebar</a></li>
+                      </ul>
+                    </li>
+                    -->
+                    <li class="mega-menu-item"><a href="#/" class="mega-title"><span>购物页面</span></a>
+                      <ul>
+                        <li><a href="shop-cart.html">购物车页面</a></li>
+                        <li><a href="shop-checkout.html">结账</a></li>
+                        <li><a href="my-account.html">我的账户</a></li>
+                        <li><a href="shop-wishlist.html">我的收藏</a></li>
+                      </ul>
+                    </li>
+                    <!--
+                    <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Product Types</span></a>
+                      <ul>
+                        <li><a href="shop-single-product.html">Product Details</a></li>
+                        <li><a href="shop-single-product-variable.html">Product Variable</a></li>
+                        <li><a href="shop-single-product-grouped.html">Product Grouped</a></li>
+                      </ul>
+                    </li>
+                    -->
+                  </ul>
+                </li>
+                <li class="has-submenu"><a href="index.html">用户管理</a>
+                  <ul class="submenu-nav">
+                    <li><a href="login-register.html">登录/注册</a></li>
+                  </ul>
+                </li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-sm-7 col-md-8 col-lg-2">
+            <div class="header-action-main-area">
+              <div class="header-action-btn-search">
+                <button class="btn-search btn-search-menu">
+                  <i class="icon-magnifier"></i>
+                </button>
+              </div>
+              <div class="header-action-wishlist">
+                <a class="btn-wishlist" href="shop-wishlist.html">
+                  <span class="cart-count">1</span>
+                  <i class="icon-heart"></i>
+                </a>
+              </div>
+              <div class="header-action-cart header-minicart">
+                <a class="btn-cart cart-icon" href="shop-cart.html">
+                  <span class="cart-count">2</span>
+                  <i class="icon-bag"></i>
+                </a>
+                <span class="cart-amount">￥30.00</span>
+                <div class="header-minicart-content">
+                  <div class="minicart-inner">
+                    <div class="minicart-list">
+                      <div class="minicart-item">
+                        <a class="thumb" href="single-product.html">
+                          <img src="/img/shop/niluo_1.jpg" alt="Image-HasTech" width="125" height="125">
+                          <span>丹东泥螺</span>
+                          <span class="quantity-number">x1</span>
+                        </a>
+                        <p class="quantity-price">￥30.00</p>
+                        <button class="minicart-remove" type="button">×</button>
+                      </div>
+                      <div class="minicart-item">
+                        <a class="thumb" href="single-product.html">
+                          <img src="/img/shop/rice.jpg" alt="Image-HasTech" width="125" height="125">
+                          <span>东港大米</span>
+                          <span class="quantity-number">x1</span>
+                        </a>
+                        <p class="quantity-price">￥53.90</p>
+                        <button class="minicart-remove" type="button">×</button>
+                      </div>
+                    </div>
+                    <div class="minicart-total">
+                      <!--
+                      <div class="minicart-price">
+                        <span>Subtotal</span>
+                        <span class="total">$85.00</span>
+                      </div>
+                      <div class="minicart-price">
+                        <span>Shipping</span>
+                        <span class="total">$7.00</span>
+                      </div>
+                      <div class="minicart-price">
+                        <span>Taxes</span>
+                        <span class="total">$85.00</span>
+                      </div>
+                      -->
+                      <div class="minicart-price minicart-subtotal">
+                        <span>总计</span>
+                        <span class="total">￥83.90</span>
+                      </div>
+                    </div>
+                    <div class="minicart-buttons">
+                      <a class="cart-button" href="shop-checkout.html">结账</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-action-area">
+                <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                  <i class="icon-menu"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--== End Header Wrapper ==-->
+  
+  <main class="main-content">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img" data-bg-img="/img/photos/bg-page1.webp">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 m-auto">
+            <div class="page-title-content text-center">
+              <h2 class="title">丹东特产，欢迎购买</h2>
+              <div class="bread-crumbs"><a href="index.html">首页</a><span class="breadcrumb-sep"><i class="ion-ios-arrow-forward"></i></span><span>商品详情</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== Start Page Title Area ==-->
+
+    <!--== Start Shop Area ==-->
+    <section class="product-area shop-single-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="single-product-slider">
+              <div class="single-product-thumb">
+                <div class="swiper-container single-product-thumb-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide zoom zoom-hover">
+                      <div class="thumb-item">
+                        <a class="lightbox-image" data-fancybox="gallery" href="/img/shop/details/1.webp">
+                          <img src="/img/shop/details/1.webp" alt="Image" width="800" height="800">
+                        </a>
+                        <div class="ribbons">
+                          <span class="ribbon ribbon-new">New</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide zoom zoom-hover">
+                      <div class="thumb-item">
+                        <a class="lightbox-image" data-fancybox="gallery" href="/img/strawberry/strawberry_1.jpg">
+                          <img src="/img/shop/strawberry/strawberry_1.jpg" alt="Image" width="800" height="800">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide zoom zoom-hover">
+                      <div class="thumb-item">
+                        <a class="lightbox-image" data-fancybox="gallery" href="/img/strawberry/strawberry_2.jpg">
+                          <img src="/img/strawberry/strawberry_2.jpg" alt="Image" width="800" height="800">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide zoom zoom-hover">
+                      <div class="thumb-item">
+                        <a class="lightbox-image" data-fancybox="gallery" href="/img/shop/strawberry/7strawberry_3.jpg">
+                          <img src="/img/shop/strawberry/strawberry_3.jpg" alt="Image" width="800" height="800">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-product-nav single-swiper-nav">
+                <div class="swiper-container single-product-nav-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="nav-item">
+                        <img src="/img/shop/details/1.webp" alt="Image" width="300" height="300">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="nav-item">
+                        <img src="/img/strawberry/strawberry_1.jpg" alt="Image" width="300" height="300">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="nav-item">
+                        <img src="/img/strawberry/strawberry_2.jpg" alt="Image" width="300" height="300">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="nav-item">
+                        <img src="/img/strawberry/strawberry_3.jpg" alt="Image" width="300" height="300">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="single-product-info product-info-variable">
+              <h4 class="title" th:text="${pname}"></h4>
+              <div class="prices">
+                <span class="price" th:text="'￥'+${price}"></span>
+              </div>
+              <div class="product-number" style="color: red" th:text="${tip}"></div>
+              <p class="product-desc">[[${profile}]]</p>
+              <div class="quick-product-action mt-0">
+                <span class="title">数量</span>
+                <div class="action-top">
+                  <div class="pro-qty">
+                    <input type="text" id="quantity1" title="Quantity" value="1" />
+                  </div>
+                  <button class="btn btn-black" onclick="window.location.href='shop-cart.html'">+ 添加到购物车</button>
+                </div>
+                <a class="btn-wishlist" href="shop-wishlist.html"><i class="ion-android-favorite-outline"></i>点击收藏</a>
+              </div>
+              <div class="card-info-area">
+                <div class="row">
+                  <div class="col-sm-4 col-6">
+                    <div class="card-item">
+                      <div class="icon">
+                        <img src="/img/icons/d1.webp" alt="Image">
+                      </div>
+                      <div class="info-content">
+                        <p>我们承诺在交易期间会全程保护您的个人隐私</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-6">
+                    <div class="card-item">
+                      <div class="icon">
+                        <img src="/img/icons/d2.webp" alt="Image">
+                      </div>
+                      <div class="info-content">
+                        <p>包邮免运费</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-6">
+                    <div class="card-item">
+                      <div class="icon">
+                        <img src="/img/icons/d3.webp" alt="Image">
+                      </div>
+                      <div class="info-content">
+                        <p>7天无条件退换货</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Shop Area ==-->
+
+    <!--== Start Shop Tab Area ==-->
+    <section class="product-area product-description-review-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="product-description-review">
+              <ul class="nav nav-tabs product-description-tab-menu" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="product-desc-tab" data-bs-toggle="tab" data-bs-target="#productDesc" type="button" role="tab" aria-controls="productDesc" aria-selected="true">商品简介</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="product-review-tab" data-bs-toggle="tab" data-bs-target="#productReview" type="button" role="tab" aria-controls="productReview" aria-selected="false">评价</button>
+                </li>
+              </ul>
+              <div class="tab-content product-description-tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="productDesc" role="tabpanel" aria-labelledby="product-desc-tab">
+                  <div class="product-desc">
+                    <p>商品名称：[[${pname}]]</p>
+                    <p>商品编号：[[${pid}]]</p>
+                    <p>商品毛重：[[${weight}]]</p>
+                    <p>包装形式：[[${pack}]]</p>
+                    <p>原产地：[[${area}]]</p>
+                    <p>国产/进口：[[${domestic}]]</p>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="commentProduct" role="tabpanel" aria-labelledby="product-comment-tab">
+                  <div class="product-details">
+                    <div class="product-manufacturer">
+                      <a href="#/">
+                        <img src="/img/photos/3.webp" alt="Image" width="191" height="90">
+                      </a>
+                    </div>
+                    <div class="product-description-info">
+                      <ul>
+                        <li>Reference <span>demo_1</span></li>
+                      </ul>
+                    </div>
+                    <div class="product-description-info">
+                      <ul>
+                        <li>In stock <span>300 Items</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="productReview" role="tabpanel" aria-labelledby="product-review-tab">
+                  <div class="product-review">
+                    <div class="review-header">
+                      <h4 class="title">买家评价</h4>
+                      <div class="review-info">
+                        <ul class="review-rating">
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star-outline"></i></li>
+                        </ul>
+                        <span class="review-caption">共1条评论</span>
+                        <span class="review-write-btn">写评论</span>
+                      </div>
+                    </div>
+                    <div class="product-review-form">
+                      <h4 class="title">写评论</h4>
+                      <form action="#" method="post">
+                        <div class="review-form-content">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="reviewFormName">姓名</label>
+                                <input class="form-control" id="reviewFormName" type="text" placeholder="姓名" required="">
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="reviewFormEmail">手机号</label>
+                                <input class="form-control" id="reviewFormEmail" type="email" placeholder="11位手机号" required="">
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="rating">
+                                <span class="rating-title">评星</span>
+                                <span>
+                                  <a class="ion-android-star-outline" href="#/"></a>
+                                  <a class="ion-android-star-outline" href="#/"></a>
+                                  <a class="ion-android-star-outline" href="#/"></a>
+                                  <a class="ion-android-star-outline" href="#/"></a>
+                                  <a class="ion-android-star-outline" href="#/"></a>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="reviewReviewTitle">评论标题</label>
+                                <input class="form-control" id="reviewReviewTitle" type="text" placeholder="给出评论标题" required="">
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="reviewFormTextarea">评论内容<span>(1500)</span></label>
+                                <textarea class="form-control textarea" id="reviewFormTextarea" name="comment" rows="7" placeholder="写下您的意见" required=""></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group pull-right">
+                                <button class="btn btn-theme" type="submit">提交评论</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="review-content">
+                      <div class="review-item">
+                        <ul class="review-rating">
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star"></i></li>
+                          <li><i class="ion-android-star-outline"></i></li>
+                        </ul>
+                        <h4 class="title">对东港草莓的评价</h4>
+                        <h5 class="review-date"><span>张三  </span> 日期： <span>2022年2月22日</span></h5>
+                        <p>草莓个大圆润，口感鲜甜，我很喜欢!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Shop Tab Area ==-->
+
+
+
+<!--=======================Javascript============================-->
+
+<!--=== Modernizr Min Js ===-->
+<script src="/js/modernizr.js"></script>
+<!--=== jQuery Min Js ===-->
+<script src="/js/jquery-main.js"></script>
+<!--=== jQuery Migration Min Js ===-->
+<script src="/js/jquery-migrate.js"></script>
+<!--=== Popper Min Js ===-->
+<script src="/js/popper.min.js"></script>
+<!--=== Bootstrap Min Js ===-->
+<script src="/js/bootstrap.min.js"></script>
+<!--=== jquery Swiper Min Js ===-->
+<script src="/js/swiper.min.js"></script>
+<!--=== jquery Fancybox Min Js ===-->
+<script src="/js/fancybox.min.js"></script>
+<!--=== jquery Countdown Js ===-->
+<script src="/js/jquery.countdown.min.js"></script>
+<!--=== jquery Zoom Min Js ===-->
+<script src="/js/jquery-zoom.min.js"></script>
+
+<!--=== Custom Js ===-->
+<script src="/js/custom.js"></script>
+
+</body>
+
+</html>

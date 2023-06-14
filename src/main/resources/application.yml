@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dandongfood?serverTimeZone=UTC&useUnicode=true&characterEncoding=utf-8
+  mvc:
+    static-path-pattern: /**
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+
+mybatis:
+  # mapper映射文件的位置
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.lee.pojo

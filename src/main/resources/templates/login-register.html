@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jena - Organic Food Website Template Using Bootstrap 5"/>
+  <meta name="keywords" content=" clean, digital, ecommerce, food, modern, multipurpose, organic, prestashop, responsive"/>
+  <meta name="author" content="Hastech"/>
+
+  <title>丹东特产销售商城</title>
+
+  <!--== Favicon ==-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  <!--== Google Fonts ==-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!--== Bootstrap CSS ==-->
+  <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+  <!--== Ionicons CSS ==-->
+  <link href="/css/ionicons.css" rel="stylesheet"/>
+  <!--== Simple Line Icons CSS ==-->
+  <link href="/css/simple-line-icons.css" rel="stylesheet"/>
+  <!--== FancyBox CSS ==-->
+  <link href="/css/jquery.fancybox.min.css" rel="stylesheet"/>
+  <!--== Swiper CSS ==-->
+  <link href="/css/swiper.min.css" rel="stylesheet"/>
+  <!--== Main Style CSS ==-->
+  <link href="/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<!--wrapper start-->
+<div class="wrapper home-default-wrapper">
+
+  <!--== Start Header Wrapper ==-->
+  <header class="header-wrapper">
+    <div class="header-top d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-top-inner">
+              <div class="header-top-action-area">
+                <div class="header-lang-dropdown">
+                  <button type="button" class="btn-lang dropdown-toggle" id="dropdownLang" data-bs-toggle="dropdown" aria-expanded="false"><img src="/img/photos/cflag.png" alt="Image" width="16" height="11"> <span>中文</span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+                    <li class="dropdown-item active"><img src="/img/photos/cflag.png" alt="Image" width="16" height="11"> <span>中文</span></li>
+                    <li class="dropdown-item"><img src="/img/photos/1.webp" alt="Image" width="16" height="11"> <span>English</span></li>
+                  </ul>
+                </div>
+                <div class="header-currency-dropdown">
+                  <button type="button" class="btn-currency dropdown-toggle" id="dropdownCurrency" data-bs-toggle="dropdown" aria-expanded="false"><span>RMB ￥</span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                    <li class="dropdown-item active"><span>RMB ￥</span></li>
+                    <li class="dropdown-item"><span>USD $</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header-top-info">
+                <div class="info-map">
+                  <a> 中国·丹东 </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-middle">
+      <div class="header-resmobile d-block d-lg-none">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-4 col-sm-4 col-3">
+              <div class="header-action-area btn-action-menu">
+                <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                  <i class="ion-navicon"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-6">
+              <div class="header-logo-area">
+                <a href="index.html">
+                  <img class="logo-main" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="57"/>
+                  <img class="logo-light" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="57"/>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-3">
+              <div class="header-middle-action-area">
+                <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                  <span class="current-item"><i class="icon-user"></i></span>
+                  <ul class="info-dropdown info-dropdown-toggle">
+                    <li><a href="my-account.html">我的账号</a></li>
+                    <li><a href="shop-checkout.html">结账</a></li>
+                    <li><a href="login-register.html">退出</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="header-search-box">
+                <form action="#" method="post">
+                  <div class="form-input-group">
+                    <input type="text" id="search2" placeholder="请输入要搜索的商品名称......">
+                    <div class="categories-dropdown">
+                      <select class="form-control select-dropdown">
+                        <option selected="">商 品 种 类</option>
+                        <option value="lan1">海产品</option>
+                        <option value="lan2">农产品</option>
+                        <option value="lan3">其他</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn-src">
+                      <i class="icon-magnifier"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container d-none d-lg-block">
+        <div class="row align-items-center">
+          <div class="col-3">
+            <div class="header-logo-area">
+              <a href="index.html">
+                <img class="logo-main" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="40"/>
+                <img class="logo-light" src="/img/logo.jpg" alt="Image-HasTech" width="168" height="40"/>
+              </a>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="header-middle-right">
+              <div class="header-search-box">
+                <form action="#" method="post">
+                  <div class="form-input-group">
+                    <input type="text" id="search" placeholder="请输入要搜索的商品名称......">
+                    <div class="categories-dropdown">
+                      <select class="form-control select-dropdown">
+                        <option selected="">商 品 种 类</option>
+                        <option value="lan1">海产品</option>
+                        <option value="lan2">农产品</option>
+                        <option value="lan3">其他</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn-src">
+                      <i class="icon-magnifier"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-area header-default sticky-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+            <div class="vertical-menu">
+              <button class="menu-btn"><span>商城一览</span></button>
+              <ul class="vmenu-content vmenu-content-none">
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">海产品<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">全母花盖蟹</a></li>
+                        <li><a href="shop.html">丹东醉泥螺</a></li>
+                        <li><a href="shop.html">东港杂色蛤</a></li>
+                        <li><a href="shop.html">东港大黄蚬</a></li>
+                        <li><a href="shop.html">东港梭子蟹</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="/img/photos/seefood.jpg"></a></li>
+                  </ul>
+                  <!-- sub menu -->
+                </li>
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">水果<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">丹东草莓</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="/img/photos/strawberry.jpg"></a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-item-title" href="shop.html">其他<i class="ion-ios-arrow-right"></i></a>
+                  <ul class="verticale-mega-menu column-two flex-wrap megamenu-nav-banner">
+                    <li>
+                      <ul class="submenu-item">
+                        <li><a href="shop.html">鸭绿江咸鸭蛋</a></li>
+                        <li><a href="shop.html">东北叉子条</a></li>
+                        <li><a href="shop.html">东港大米</a></li>
+                        <li><a href="shop.html">东港板栗</a></li>
+                        <li><a href="shop.html">石柱参</a></li>
+                        <li><a href="shop.html">凤城蚕蛹</a></li>
+                      </ul>
+                    </li>
+                    <li class="vmegamenu-banner-item"><a href="shop.html" class="vmegamenu-banner" data-bg-img="/img/photos/yaluriver.jpg"></a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- menu content -->
+            </div>
+          </div>
+          <div class="col-lg-7 d-none d-lg-block">
+            <div class="header-navigation-area">
+              <ul class="main-menu nav position-relative">
+                <li class="has-submenu active"><a href="index.html">首页</a>
+                </li>
+                <li><a href="shop-login.html"><span>进入商城</span></a>
+                </li>
+                <li class="has-submenu"><a>用户管理</a>
+                  <ul class="submenu-nav">
+                    <li><a href="login-register.html">登录/注册</a></li>
+                    <li><a href="my-account.html">我的账户</a></li>
+                  </ul>
+                </li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--== End Header Wrapper ==-->
+
+  <main class="main-content">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page1.webp">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 m-auto">
+            <div class="page-title-content text-center">
+              <h2 class="title">登录 / 注册</h2>
+              <div class="bread-crumbs"><a href="index.html">首页</a><span class="breadcrumb-sep"><i class="ion-ios-arrow-forward"></i></span><span>登录 / 注册</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== Start Page Title Area ==-->
+
+    <!--== Start Login Wrapper ==-->
+    <section class="login-register-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 login-register-border">
+            <div class="login-register-content">
+              <div class="login-register-title mb-30">
+                <h2>登录</h2>
+                <p>欢迎回来! 请输入您的用户名和密码进行登录. </p>
+              </div>
+              <div class="login-register-style login-register-pr">
+                <form action="/user/loginUser" method="post">
+                  <p style="color: red" th:text="${msg}"></p>
+                  <div class="login-register-input">
+                    <input type="text" name="username" placeholder="用户名">
+                  </div>
+                  <div class="login-register-input">
+                    <input type="password" name="password" placeholder="密码">
+                    <div class="forgot">
+                      <a href="#">忘记密码?</a>
+                    </div>
+                  </div>
+                  <div class="remember-me-btn">
+                    <input type="checkbox">
+                    <label>记住密码</label>
+                  </div>
+                  <div class="btn-style-3">
+                    <button class="btn"  type="submit">登录</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="login-register-content login-register-pl">
+              <div class="login-register-title mb-30">
+                  <h2>注册</h2>
+                  <p>立即创建新帐户，享受个性化购物体验带来的好处。 </p>
+              </div>
+              <div class="login-register-style">
+                <form action="/user/register" method="post">
+                  <p style="color: red" th:text="${rmsg}"></p>
+                  <div class="login-register-input">
+                    <input type="text" name="username" placeholder="用户名">
+                  </div>
+                  <div class="login-register-input">
+                    <input type="text" name="telephone" placeholder="手机号码">
+                  </div>
+                  <div class="login-register-input">
+                    <input type="password" name="password" placeholder="密码">
+                  </div>
+                  <div class="login-register-paragraph">
+                    <p>已有账号？请在旁边登录<br> <a href="privacy.html">隐私政策，点击查看.</a></p>
+                  </div>
+                  <div class="btn-style-3">
+                    <button class="btn" type="submit">注册</button>
+                  </div>
+                </form>
+                <div class="register-benefits">
+                  <h3>现在注册，你能够享受到以下服务</h3>
+                  <p>注册 <br>或登录，你能够：</p>
+                  <ul>
+                    <li><i class="ion-ios-checkmark-outline icons"></i> 快速结帐</li>
+                    <li><i class="ion-ios-checkmark-outline icons"></i> 跟踪订单信息</li>
+                    <li><i class="ion-ios-checkmark-outline icons"></i> 记录购买信息</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== End Login Wrapper ==-->
+  </main>
+
+
+
+<!--=======================Javascript============================-->
+
+<!--=== Modernizr Min Js ===-->
+<script src="assets/js/modernizr.js"></script>
+<!--=== jQuery Min Js ===-->
+<script src="assets/js/jquery-main.js"></script>
+<!--=== jQuery Migration Min Js ===-->
+<script src="assets/js/jquery-migrate.js"></script>
+<!--=== Popper Min Js ===-->
+<script src="assets/js/popper.min.js"></script>
+<!--=== Bootstrap Min Js ===-->
+<script src="assets/js/bootstrap.min.js"></script>
+<!--=== jquery Swiper Min Js ===-->
+<script src="assets/js/swiper.min.js"></script>
+<!--=== jquery Fancybox Min Js ===-->
+<script src="assets/js/fancybox.min.js"></script>
+<!--=== jquery Countdown Js ===-->
+<script src="assets/js/jquery.countdown.min.js"></script>
+<!--=== jquery Zoom Min Js ===-->
+<script src="assets/js/jquery-zoom.min.js"></script>
+
+<!--=== Custom Js ===-->
+<script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
